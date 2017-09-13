@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 const config = {
   context: __dirname,
-  entry: ['react-hot-loader/patch', 'webpack-dev-server/client?http://localhost:8080', 'webpack/hot/only-dev-server', './js/myApp.jsx'],
+  entry: ['./js/myApp.jsx'],
   devtool: 'cheap-eval-source-map',
   output: {
     path: path.join(__dirname, 'public'),
@@ -23,7 +23,6 @@ const config = {
     reasons: true,
     chunks: true
   },
-  plugins: [new webpack.HotModuleReplacementPlugin(), new webpack.NamedModulesPlugin()],
   module: {
     rules: [
       {
@@ -40,7 +39,7 @@ const config = {
   }
 };
 if (process.env.NODE_ENV === 'production') {
-  config.entry = ['./js/ClientApp.jsx'];
+  config.entry = ['./js/myApp.jsx'];
   config.devtool = false;
   config.plugins = [];
 }
