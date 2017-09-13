@@ -8,7 +8,7 @@ const ReactRouter = require('react-router-dom');
 const _ = require('lodash');
 const fs = require('fs');
 const compression = require('compression');
-const App = require('./js/app').default;
+const App = require('./js/App').default;
 
 const StaticRouter = ReactRouter.StaticRouter;
 const port = 8080;

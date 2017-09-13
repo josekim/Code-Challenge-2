@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 const config = {
   context: __dirname,
-  entry: ['./js/myApp.jsx'],
+  entry: ['./js/MyApp.jsx'],
   devtool: 'cheap-eval-source-map',
   output: {
     path: path.join(__dirname, 'public'),
@@ -11,7 +11,6 @@ const config = {
     publicPath: '/public/'
   },
   devServer: {
-    hot: true,
     publicPath: '/public/',
     historyApiFallback: true
   },
@@ -39,7 +38,7 @@ const config = {
   }
 };
 if (process.env.NODE_ENV === 'production') {
-  config.entry = ['./js/myApp.jsx'];
+  config.entry = ['./js/MyApp.jsx'];
   config.devtool = false;
   config.plugins = [];
 }
