@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import Table from './Table';
 import SearchBar from './SearchBar';
 import data from '../Data.json';
-import FilterData from './utility/helper';
 
 const dropDownOptions = ['Show All', 'Organized', 'Unorganized'];
 
@@ -26,7 +25,7 @@ class TableContainer extends Component {
           searchTerm={this.state.searchTerm}
           handleSearchChange={this.handleSearchChange}
         />
-        <Table data={FilterData(data, this.state.searchTerm)} />
+        <Table data={data} searchTerm={this.state.searchTerm} option={this.state.option} />
       </div>
     );
   }
