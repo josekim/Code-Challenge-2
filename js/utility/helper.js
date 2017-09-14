@@ -17,4 +17,17 @@ const FilterData = function FilterData(data, searchTerm, option) {
   );
 };
 
-export default FilterData;
+const newDataArray = function newDataArray(data, sender) {
+  const newData = [];
+  data.forEach(instance => {
+    if (instance.sender !== sender) {
+      newData.push(instance);
+    } else if (instance.sender === sender) {
+      const newInstance = Object.assign({}, instance, { organize: !instance.organize });
+      newData.push(newInstance);
+    }
+  });
+  return newData;
+};
+
+export { FilterData, newDataArray };

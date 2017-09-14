@@ -2,9 +2,9 @@
 
 import React from 'react';
 import TableLine from './TableLine';
-import FilterData from './utility/helper';
+import { FilterData } from './utility/helper';
 
-const Table = (props: { data: Array<data>, searchTerm: string, option: string }) => (
+const Table = (props: { data: Array<data>, searchTerm: string, option: string, handlesOrganizeChange: Function }) => (
   <table>
     <thead>
       <tr>
@@ -15,7 +15,11 @@ const Table = (props: { data: Array<data>, searchTerm: string, option: string })
         <th>Folder</th>
       </tr>
     </thead>
-    <tbody>{FilterData(props.data, props.searchTerm, props.option).map(data => <TableLine key={data.email} {...data} />)}</tbody>
+    <tbody>
+      {FilterData(props.data, props.searchTerm, props.option).map(data => (
+        <TableLine key={data.email} handlesOrganizeChange={props.handlesOrganizeChange} {...data} />
+      ))}
+    </tbody>
   </table>
 );
 
