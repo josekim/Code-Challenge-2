@@ -7,7 +7,9 @@
 /coverage
 
 # production
-/build
+public/bundle.js
+public/*bundle*
+*.bundle.js
 
 # misc
 .DS_Store
@@ -20,3 +22,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .eslintcache
+
+*.map
+
+_site/
+.sass-cache/
+*.iml
+.idea/

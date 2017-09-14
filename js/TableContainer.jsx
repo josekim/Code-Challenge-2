@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Table from './Table';
 import SearchBar from './SearchBar';
+import data from '../Data.json';
 
-const TableContainer = () => (
-  <div>
-    <SearchBar />
-    <Table />
-  </div>
-);
+class TableContainer extends Component {
+  state = { data };
+  render() {
+    return (
+      <div>
+        <SearchBar />
+        <Table />
+      </div>
+    );
+  }
+}
 
 export default TableContainer;
