@@ -15,11 +15,11 @@ yarn build
 yarn start    // this should start up a server that you can access from  http://localhost:8080/
 ```
 ## Technologies
-React
-Redux
-Webpack
-Eslint - AirBnB
-babel
-flow 
-prettier  [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+* React
+* Redux
+* Webpack
+* Eslint - AirBnB
+* babel
+* flow 
+* prettier  [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 

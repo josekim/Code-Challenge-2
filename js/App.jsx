@@ -1,7 +1,6 @@
 // @flow
 
 import React from 'react';
-import { Button } from 'react-bootstrap';
 import Header from './Header';
 import Table from './Table';
 
@@ -12,7 +11,6 @@ const App = () => (
   <div>
     <Header title={title} subtext={subtext} />
     <Table />
-    <Button />
   </div>
 );
 
