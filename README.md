@@ -6,7 +6,8 @@ This was a [code challenge](https://github.com/josekim/Code-Challenge) that I re
 A Data.json file and a [organizer_mock.png](./organizer_mock.png) file were given to me to build a website using React.  
 
 * 9/13 @ start - Since this is the beginning - Currently it only produces a "hello World"
-* 9/14 @ start - The header component is finish need to work on the searchbar and table portion.  
+* 9/14 @ start - The header component is finished need to work on the searchbar and table portion.  React portion mostly finished, need to work on CSS, and then consider pagination.
+* 
 
 ## Dependencies
 
