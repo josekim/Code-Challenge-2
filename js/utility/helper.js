@@ -17,14 +17,25 @@ const FilterData = function FilterData(data, searchTerm, option) {
   );
 };
 
-const newDataArray = function newDataArray(data, sender, checked, value) {
+const newDataArrayChecked = function newDataArrayChecked(data, sender, checked) {
   const newData = [];
   data.forEach(instance => {
     if (instance.sender !== sender) {
       newData.push(instance);
     } else if (instance.sender === sender) {
-      const newInstance =
-        checked !== undefined ? Object.assign({}, instance, { organize: checked }) : Object.assign({}, instance, { folder: value });
+      const newInstance = Object.assign({}, instance, { organize: checked });
+      newData.push(newInstance);
+    }
+  });
+  return newData;
+};
+const newDataArrayFolder = function newDataArrayFolder(data, sender, value) {
+  const newData = [];
+  data.forEach(instance => {
+    if (instance.sender !== sender) {
+      newData.push(instance);
+    } else if (instance.sender === sender) {
+      const newInstance = Object.assign({}, instance, { folder: value });
       newData.push(newInstance);
     }
   });
@@ -44,4 +55,4 @@ const newFolderArray = function newFolderArray(data) {
   return uniq;
 };
 
-export { FilterData, newDataArray, newFolderArray };
+export { FilterData, newDataArrayChecked, newDataArrayFolder, newFolderArray };

@@ -6,10 +6,10 @@ import { FilterData } from './utility/helper';
 
 const Table = (props: {
   data: Array<data>,
-
+  folderOptions: Array<string>,
   searchTerm: string,
   option: string,
-
+  handleFolderChange: Function,
   handlesOrganizeChange: Function
 }) => (
   <table>

@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import Table from './Table';
 import SearchBar from './SearchBar';
 import data from '../Data.json';
-import { newDataArray, newFolderArray } from './utility/helper';
+import { newDataArrayChecked, newDataArrayFolder, newFolderArray } from './utility/helper';
 
 const dropDownOptions = ['Show All', 'Organized', 'Unorganized'];
 const folderOptions = newFolderArray(data);
@@ -17,12 +17,12 @@ class TableContainer extends Component {
   handleSearchChange = (event: { target: { value: string } }) => {
     this.setState({ searchTerm: event.target.value });
   };
-  handlesOrganizeChange = (event: { target: { value: string, name: string, checked: boolean } }) => {
-    const newData = newDataArray(this.state.data, event.target.name, event.target.checked, event.target.value);
+  handlesOrganizeChange = (event: { target: { name: string, checked: boolean } }) => {
+    const newData = newDataArrayChecked(this.state.data, event.target.name, event.target.checked);
     this.setState({ data: newData });
   };
-  handleFolderChange = (event: { target: { value: string, name: string, checked: boolean } }) => {
-    const newData = newDataArray(this.state.data, event.target.name, event.target.checked, event.target.value);
+  handleFolderChange = (event: { target: { value: string, name: string } }) => {
+    const newData = newDataArrayFolder(this.state.data, event.target.name, event.target.value);
     this.setState({ data: newData });
   };
   render() {
