@@ -17,17 +17,31 @@ const FilterData = function FilterData(data, searchTerm, option) {
   );
 };
 
-const newDataArray = function newDataArray(data, sender) {
+const newDataArray = function newDataArray(data, sender, checked, value) {
   const newData = [];
   data.forEach(instance => {
     if (instance.sender !== sender) {
       newData.push(instance);
     } else if (instance.sender === sender) {
-      const newInstance = Object.assign({}, instance, { organize: !instance.organize });
+      const newInstance =
+        checked !== undefined ? Object.assign({}, instance, { organize: checked }) : Object.assign({}, instance, { folder: value });
       newData.push(newInstance);
     }
   });
   return newData;
 };
 
-export { FilterData, newDataArray };
+function onlyUnique(value, index, self) {
+  return self.indexOf(value) === index;
+}
+
+const newFolderArray = function newFolderArray(data) {
+  const newData = [];
+  data.forEach(instance => {
+    newData.push(instance.folder);
+  });
+  const uniq = newData.filter(onlyUnique);
+  return uniq;
+};
+
+export { FilterData, newDataArray, newFolderArray };

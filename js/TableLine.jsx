@@ -8,16 +8,26 @@ const TableLine = (props: {
   domain: string,
   email: string,
   folder: string,
+  folderOptions: Array<string>,
+  handleFolderChange: Function,
   handlesOrganizeChange: Function
 }) => (
   <tr>
     <th>
-      <input type="checkbox" name="{props.sender}" value={props.sender} checked={props.organize} onChange={props.handlesOrganizeChange} />
+      <input type="checkbox" name={props.sender} value={props.sender} checked={props.organize} onChange={props.handlesOrganizeChange} />
     </th>
     <th> {props.sender} </th>
     <th> {props.domain} </th>
     <th> {props.email} </th>
-    <th> {props.folder} </th>
+    <th>
+      <select value={props.folder} name={props.sender} onChange={props.handleFolderChange}>
+        {props.folderOptions.map(choice => (
+          <option value={choice} key={choice}>
+            {choice}
+          </option>
+        ))}
+      </select>
+    </th>
   </tr>
 );
 
