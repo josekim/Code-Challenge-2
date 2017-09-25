@@ -7,3 +7,69 @@ body {
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+table {
+  padding-right: 50px;
+  background-color: #f3f3f3;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+  font-size: 0.9em;
+  color: #656565;
+}
+
+thead {
+  font-size: 0.9em;
+}
+tbody {
+  padding-right: 20px;
+}
+
+tr {
+}
+
+th {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.table-container {
+  padding-right: 150px;
+}
+.organize {
+  text-align: center;
+  vertical-align: middle;
+  padding-right: 0px;
+  padding-left: 4px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-color: #ffffff;
+  border-top: 15px solid #f3f3f3;
+  border-bottom: 15px solid #f3f3f3;
+}
+
+.sender {
+}
+
+.email {
+}
+
+.folder {
+}
+
+.white-cell {
+  background-color: #ffffff;
+  padding-right: 0px;
+  padding-left: 4px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-color: #ffffff;
+  border-top: 15px solid #f3f3f3;
+  border-bottom: 15px solid #f3f3f3;
+}
+
+.modifier {
+  float: right;
+  background: red;
+  width: 5%;
+  height: 100%;
+}

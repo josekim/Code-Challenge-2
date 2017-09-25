@@ -1,6 +1,13 @@
 // @flow
 
 import React from 'react';
+import styled from 'styled-components';
+import { FolderColor } from './utility/FolderColor';
+
+const FolderDropdown = styled.select`
+  width: 100%;
+  font-size: 1em;
+`;
 
 const TableLine = (props: {
   organize: boolean,
@@ -13,21 +20,22 @@ const TableLine = (props: {
   handlesOrganizeChange: Function
 }) => (
   <tr>
-    <td>
+    <td className="organize">
       <input type="checkbox" name={props.sender} value={props.sender} checked={props.organize} onChange={props.handlesOrganizeChange} />
     </td>
-    <td> {props.sender} </td>
-    <td> {props.domain} </td>
-    <td> {props.email} </td>
-    <td>
-      <select value={props.folder} name={props.sender} onChange={props.handleFolderChange}>
+    <td className="white-cell"> {props.sender} </td>
+    <td className="white-cell"> {props.domain} </td>
+    <td className="white-cell"> {props.email} </td>
+    <td className="white-cell">
+      <FolderDropdown value={props.folder} name={props.sender} onChange={props.handleFolderChange}>
         {props.folderOptions.map(choice => (
           <option value={choice} key={choice}>
             {choice}
           </option>
         ))}
-      </select>
+      </FolderDropdown>
     </td>
+    {FolderColor(props.folder)}
   </tr>
 );
 

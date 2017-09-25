@@ -10,13 +10,15 @@ const SearchBarWrapper = styled.div`
   padding-bottom: 10px;
 `;
 const DropDown = styled.select`
+  float: left;
   font-size: 0.9em;
   margin-right: 5%;
 `;
 
 const SearchInput = styled.input`
-  width: 25%;
+  margin-left: 20%;
   font-size: 0.9em;
+  width: 25%;
 `;
 
 const SearchBar = (props: {
@@ -27,6 +29,8 @@ const SearchBar = (props: {
   handleSearchChange: Function
 }) => (
   <SearchBarWrapper>
+    <SearchInput type="text" value={props.searchTerm} onChange={props.handleSearchChange} placeholder="Search for a sender..." />
+
     <DropDown value={props.option} onChange={props.handleOptionChange}>
       {props.dropDownOptions.map(choice => (
         <option value={choice} key={choice}>
@@ -34,8 +38,6 @@ const SearchBar = (props: {
         </option>
       ))}
     </DropDown>
-
-    <SearchInput type="text" value={props.searchTerm} onChange={props.handleSearchChange} placeholder="Search for a sender..." />
   </SearchBarWrapper>
 );
 

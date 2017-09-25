@@ -27,7 +27,7 @@ class TableContainer extends Component {
   };
   render() {
     return (
-      <div>
+      <div className="table-container">
         <SearchBar
           option={this.state.option}
           dropDownOptions={dropDownOptions}
