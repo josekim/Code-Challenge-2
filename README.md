@@ -7,7 +7,7 @@ A Data.json file and a [organizer_mock.png](./organizer_mock.png) file were give
 
 * 9/13 @ start - Since this is the beginning - Currently it only produces a "hello World"
 * 9/14 @ start - The header component is finished need to work on the searchbar and table portion.  React portion mostly finished, need to work on CSS, and then consider pagination.
-* 
+* 9/25 Finished CSS Tried my best to match style. Some are added in Application.css, others are done with Styled Components
 
 ## Dependencies
 
