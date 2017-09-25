@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { FolderColor } from './utility/FolderColor';
 
 const FolderDropdown = styled.select`
-  width: 100%;
+  width: 95%;
   font-size: 1em;
 `;
 

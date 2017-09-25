@@ -6,10 +6,16 @@ import TableLine from './TableLine';
 import { FilterData } from './utility/helper';
 
 const Organize = styled.th`
+  width: 10%;
   padding-top: 15px;
   padding-bottom: 15px;
   text-align: center;
   vertical-align: middle;
+`;
+const Fields = styled.th`
+  width: 23%;
+  padding-top: 15px;
+  padding-bottom: 15px;
 `;
 
 const Table = (props: {
@@ -26,10 +32,10 @@ const Table = (props: {
     <thead>
       <tr>
         <Organize> Organize </Organize>
-        <th> Sender </th>
-        <th> Domain </th>
-        <th> Email </th>
-        <th> Folder </th>
+        <Fields> Sender </Fields>
+        <Fields> Domain </Fields>
+        <Fields> Email </Fields>
+        <Fields> Folder </Fields>
         <th />
       </tr>
     </thead>

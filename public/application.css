@@ -9,7 +9,6 @@ body {
 }
 
 table {
-  padding-right: 50px;
   background-color: #f3f3f3;
   border-collapse: collapse;
   width: 100%;
@@ -31,40 +30,33 @@ tr {
 th {
   padding-top: 15px;
   padding-bottom: 15px;
+  font-size: 1.2em;
 }
 .table-container {
-  padding-right: 150px;
+  padding-right: 20px;
 }
+
 .organize {
   text-align: center;
   vertical-align: middle;
   padding-right: 0px;
   padding-left: 4px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-color: #ffffff;
-  border-top: 15px solid #f3f3f3;
-  border-bottom: 15px solid #f3f3f3;
+  border-top: 18px solid #f3f3f3;
+  border-bottom: 18px solid #f3f3f3;
+  color: #666666;
 }
-
-.sender {
-}
-
-.email {
-}
-
-.folder {
-}
-
 .white-cell {
   background-color: #ffffff;
   padding-right: 0px;
   padding-left: 4px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-color: #ffffff;
-  border-top: 15px solid #f3f3f3;
-  border-bottom: 15px solid #f3f3f3;
+  border-top: 18px solid #f3f3f3;
+  border-bottom: 18px solid #f3f3f3;
 }
 
 .modifier {

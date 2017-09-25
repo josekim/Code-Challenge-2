@@ -10,13 +10,14 @@ const SearchBarWrapper = styled.div`
   padding-bottom: 10px;
 `;
 const DropDown = styled.select`
+  width: 15%;
   float: left;
   font-size: 0.9em;
   margin-right: 5%;
 `;
 
 const SearchInput = styled.input`
-  margin-left: 20%;
+  margin-left: 13%;
   font-size: 0.9em;
   width: 25%;
 `;
