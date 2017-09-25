@@ -13,13 +13,13 @@ const TableLine = (props: {
   handlesOrganizeChange: Function
 }) => (
   <tr>
-    <th>
+    <td>
       <input type="checkbox" name={props.sender} value={props.sender} checked={props.organize} onChange={props.handlesOrganizeChange} />
-    </th>
-    <th> {props.sender} </th>
-    <th> {props.domain} </th>
-    <th> {props.email} </th>
-    <th>
+    </td>
+    <td> {props.sender} </td>
+    <td> {props.domain} </td>
+    <td> {props.email} </td>
+    <td>
       <select value={props.folder} name={props.sender} onChange={props.handleFolderChange}>
         {props.folderOptions.map(choice => (
           <option value={choice} key={choice}>
@@ -27,7 +27,7 @@ const TableLine = (props: {
           </option>
         ))}
       </select>
-    </th>
+    </td>
   </tr>
 );
 

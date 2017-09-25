@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const HeaderWrapper = styled.div`
   text-align: center;
   color: #404347;
+  margin-bottom: 30px;
 `;
 
 const SubtextWrapper = styled.h2`

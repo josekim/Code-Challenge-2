@@ -6,9 +6,11 @@ import { FilterData } from './utility/helper';
 
 const Table = (props: {
   data: Array<data>,
+  //eslint-disable-next-line
   folderOptions: Array<string>,
   searchTerm: string,
   option: string,
+  //eslint-disable-next-line
   handleFolderChange: Function,
   handlesOrganizeChange: Function
 }) => (
